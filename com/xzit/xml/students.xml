@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- a common _xml type file -->
+<students >
+	<student code="001">
+		<name>JoneC</name>
+		<birthday>2001-02-01</birthday>
+		<sex>male</sex>
+	</student>
+	<student code="002">
+		<name>DaveS</name>
+		<birthday>2002-05-21</birthday>
+		<sex>female</sex>
+	</student>
+	<student code="003">
+		<name>JaneC</name>
+		<birthday>2004-03-19</birthday>
+		<sex>male</sex>
+	</student>
+</students>
