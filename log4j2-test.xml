@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration name="MyTest">
+    <Appenders>
+        <Console  name="CS" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{YYYY:MM:dd}   %m%n"/>
+        </Console>
+
+        <File name="FL" bufferedIO="true" createOnDemand="true"
+              fileName="E:/DESKTOP/a.txt" immediateFlush="true" bufferSize="8192"
+              append="true">
+            <PatternLayout pattern="%d{YYYY:MM:dd}   %m%n"/>
+        </File>
+
+        <RollingFile name="RF" bufferedIO="true" createOnDemand="true"
+                fileName="E:/DESKTOP/a.log" immediateFlush="true"
+                filePattern="E:/DESKTOP/$${date:yyyy-MM}/a-%d{MM-dd-yyyy}-.log">
+            <PatternLayout pattern="%d{YYYY:MM:dd}   %m%n"/>
+            <SizeBasedTriggeringPolicy size="1KB" />
+            <DefaultRolloverStrategy min="3" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root>
+            <AppenderRef ref="CS"/>
+            <AppenderRef ref="RF"/>
+        </Root>
+    </Loggers>
+</Configuration>
